@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json({ extended: false }))
 
 app.get('/usuario', function (req, res) {
-    res.json('get Usuario');
+    res.json('get Usuario LOCAL!!!!');
 })
 
 app.post('/usuario', function (req, res) {
