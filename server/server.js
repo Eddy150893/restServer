@@ -5,7 +5,8 @@ const app = express();
 const bodyParser = require("body-parser");
 app.use(bodyParser.json({ extended: false }));
 app.use(require("./routes/usuario"));
-mongoose.connect("mongodb://localhost:27017/cafe", 
+//"mongodb://localhost:27017/cafe"
+mongoose.connect(process.env.URLDB, 
                 {useNewUrlParser:true,useCreateIndex:true,useUnifiedTopology: true},
                   (err, res) => {
   if (err) throw err;
