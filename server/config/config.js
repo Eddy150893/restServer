@@ -14,11 +14,14 @@ process.env.NODE_ENV=process.env.NODE_ENV||'dev';
 //=============================
 
 let urlDB;
-
+//Se ocultara la url de produccion
+//utilizando seteo de variables de entorno en heroku
+//si se quisiera ver el valor de la variable
+//colocar en la terminal heroku config->solo servira para el usuario que tenga acceso al heroku
 if(process.env.NODE_ENV==='dev'){
     urlDB='mongodb://localhost:27017/cafe';
 }else{
-    urlDB='mongodb+srv://root:uYRiSH8vWZ60i0CN@cluster0-pqmpq.mongodb.net/cafe'
+    urlDB=process.env.MONGO_URI;
 }
 
 process.env.URLDB=urlDB
