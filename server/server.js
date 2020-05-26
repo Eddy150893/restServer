@@ -4,7 +4,8 @@ const mongoose = require("mongoose");
 const app = express();
 const bodyParser = require("body-parser");
 app.use(bodyParser.json({ extended: false }));
-app.use(require("./routes/usuario"));
+//Configuracion global de rutas
+app.use(require('./routes/index'));
 //"mongodb://localhost:27017/cafe"
 mongoose.connect(process.env.URLDB, 
                 {useNewUrlParser:true,useCreateIndex:true,useUnifiedTopology: true},
