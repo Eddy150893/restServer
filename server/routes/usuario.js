@@ -40,6 +40,7 @@ app.get("/usuario",verificaToken,(req, res)=>{
          })
 });
 
+//Solo si el usuario es admin puede registrar a un usuario
 app.post("/usuario",[verificaToken,verificaAdmin_Role],function(req, res){
   let body = req.body;
   let usuario = new Usuario({
@@ -63,6 +64,7 @@ app.post("/usuario",[verificaToken,verificaAdmin_Role],function(req, res){
   });
 });
 
+//Solo si el usuario es admin puede actualizar
 app.put("/usuario/:id",[verificaToken,verificaAdmin_Role], function(req, res) {
   let id = req.params.id;
   //la funcion pick del underscore indica que campos son validados para la actualizacion.

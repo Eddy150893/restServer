@@ -42,3 +42,8 @@ process.env.CADUCIDAD_TOKEN=60*60*60*30;
 //En heroku se debe declarar este seed con un seteo de var. de config.
 //heroku config:set SEED="cualquier valor"
 process.env.SEED=process.env.SEED||'este-es-el-seed-desarrollo';
+
+//=============================
+//CLIENT_ID proporcionado por google
+//=============================
+process.env.CLIENT_ID=process.env.CLIENT_ID||"711970904452-36v1raodg14g21l7v9mbq23kflhg07gn.apps.googleusercontent.com";
