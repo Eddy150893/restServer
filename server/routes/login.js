@@ -7,8 +7,8 @@ const {OAuth2Client} = require('google-auth-library');
 const client = new OAuth2Client(process.env.CLIENT_ID);
 
 app.post('/login',(req,res)=>{
-
     let body=req.body;
+    console.log(body);
     Usuario.findOne({ email:body.email},(err,usuarioDB)=>{
         if (err) {
             return res.status(500).json({

@@ -19,7 +19,7 @@ let urlDB;
 //utilizando seteo de variables de entorno en heroku
 //si se quisiera ver el valor de la variable
 //colocar en la terminal heroku config->solo servira para el usuario que tenga acceso al heroku
- if(process.env.NODE_ENV==='dev'){
+if(process.env.NODE_ENV==='dev'){
     urlDB='mongodb://localhost:27017/cafe';
 }else{
     urlDB=process.env.MONGO_URI;
